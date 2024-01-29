@@ -1527,7 +1527,6 @@ class ImageGallery extends React.Component {
             >
               <div className="image-gallery-slides">{slides}</div>
             </SwipeWrapper>
-            {renderCustomControls && renderCustomControls()}
           </React.Fragment>
         ) : (
           <div className="image-gallery-slides">{slides}</div>
