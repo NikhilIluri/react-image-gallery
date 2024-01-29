@@ -1507,7 +1507,6 @@ class ImageGallery extends React.Component {
 
     const slideWrapper = (
       <div ref={this.imageGallerySlideWrapper} className={slideWrapperClass}>
-        {renderCustomControls && renderCustomControls()}
         {this.canSlide() ? (
           <React.Fragment>
             {showNav && (
@@ -1528,6 +1527,7 @@ class ImageGallery extends React.Component {
             >
               <div className="image-gallery-slides">{slides}</div>
             </SwipeWrapper>
+            {renderCustomControls && renderCustomControls()}
           </React.Fragment>
         ) : (
           <div className="image-gallery-slides">{slides}</div>
