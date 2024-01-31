@@ -381,13 +381,13 @@ class ImageGallery extends React.Component {
     const rightClassName = "image-gallery-right";
 
     switch (index) {
-      case currentIndex - 1:
+      case currentIndex - 1 || currentIndex - 2:
         alignment = ` ${leftClassName}`;
         break;
       case currentIndex:
         alignment = ` ${centerClassName}`;
         break;
-      case currentIndex + 1:
+      case currentIndex + 1 || currentIndex + 2:
         alignment = ` ${rightClassName}`;
         break;
       default:
