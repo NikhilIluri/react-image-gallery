@@ -52,6 +52,7 @@ class ImageGallery extends React.Component {
       isFullscreen: false,
       isSwipingThumbnail: false,
       isPlaying: false,
+      items: props.items
     };
     this.loadedImages = {};
     this.imageGallery = React.createRef();
@@ -196,6 +197,7 @@ class ImageGallery extends React.Component {
       // do not transition when new items are added
       this.setState({
         currentIndex: startIndex,
+        items: items,
         slideStyle: { transition: "none" },
       });
     }
