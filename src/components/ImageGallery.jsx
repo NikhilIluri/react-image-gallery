@@ -79,6 +79,7 @@ class ImageGallery extends React.Component {
     this.slideRight = this.slideRight.bind(this);
     this.toggleFullScreen = this.toggleFullScreen.bind(this);
     this.togglePlay = this.togglePlay.bind(this);
+    this.updateItems = this.updateItems.bind(this);
 
     // Used to update the throttle if slideDuration changes
     this.unthrottledSlideToIndex = this.slideToIndex;
@@ -1167,6 +1168,10 @@ class ImageGallery extends React.Component {
     } else {
       this.fullScreen();
     }
+  }
+
+  updateItems(items) {
+    this.setState({items: items})
   }
 
   togglePlay() {
